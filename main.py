@@ -16,11 +16,14 @@ paddlel = Paddle(-1)
 scoreboard = Scoreboard()
 scoreboard.writer()
 
+def quit():
+    wn.bye()
 
 wn.onkey(fun= paddler.moveUp,key='Up')
 wn.onkey(fun= paddler.moveDown,key='Down')
 wn.onkey(fun= paddlel.moveUp,key='w')
 wn.onkey(fun= paddlel.moveDown,key='s')
+wn.onkey(fun= quit,key='q')
 
 while True:
    
